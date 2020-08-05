@@ -1,0 +1,562 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/place"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="뒤로" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_space"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <Button
+                android:id="@+id/button_seoul"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="서울"
+                app:layout_constraintBottom_toTopOf="@id/button_hongdae"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_gangnam"
+                app:layout_constraintTop_toBottomOf="@id/textView_place" />
+
+            <Button
+                android:id="@+id/button_gangnam"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="강남"
+                app:layout_constraintBottom_toTopOf="@id/button_hongdae"
+                app:layout_constraintLeft_toRightOf="@id/button_seoul"
+                app:layout_constraintRight_toLeftOf="@id/button_gundae"
+                app:layout_constraintTop_toBottomOf="@id/textView_place" />
+
+            <Button
+                android:id="@+id/button_gundae"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="건대"
+                app:layout_constraintBottom_toTopOf="@id/button_hongdae"
+                app:layout_constraintLeft_toRightOf="@id/button_gangnam"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_place" />
+
+            <Button
+                android:id="@+id/button_hongdae"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="홍대"
+                app:layout_constraintBottom_toTopOf="@id/button_else"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_hyehwa"
+                app:layout_constraintTop_toBottomOf="@id/button_seoul" />
+
+            <Button
+                android:id="@+id/button_hyehwa"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="혜화"
+                app:layout_constraintBottom_toTopOf="@id/button_else"
+                app:layout_constraintLeft_toRightOf="@id/button_hongdae"
+                app:layout_constraintRight_toLeftOf="@id/button_sinlim"
+                app:layout_constraintTop_toBottomOf="@id/button_seoul" />
+
+            <Button
+                android:id="@+id/button_sinlim"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="신림"
+                app:layout_constraintBottom_toTopOf="@id/button_else"
+                app:layout_constraintLeft_toRightOf="@id/button_hyehwa"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_seoul" />
+
+            <Button
+                android:id="@+id/button_else"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="기타지역"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/space1"
+                app:layout_constraintTop_toBottomOf="@id/button_hongdae" />
+
+            <TextView
+                android:id="@+id/textView_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="선호 장소"
+                app:layout_constraintBottom_toTopOf="@id/button_seoul"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_else"
+                app:layout_constraintRight_toLeftOf="@id/space2"
+                app:layout_constraintTop_toBottomOf="@id/button_hongdae" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/space1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_hongdae" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_genre"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <Button
+                android:id="@+id/button_drama"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="드라마"
+                app:layout_constraintBottom_toTopOf="@id/button_adventure"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_fantasy"
+                app:layout_constraintTop_toBottomOf="@id/textView_genre" />
+
+            <Button
+                android:id="@+id/button_fantasy"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="판타지"
+                app:layout_constraintBottom_toTopOf="@id/button_adventure"
+                app:layout_constraintLeft_toRightOf="@id/button_drama"
+                app:layout_constraintRight_toLeftOf="@id/button_comedy"
+                app:layout_constraintTop_toBottomOf="@id/textView_genre" />
+
+            <Button
+                android:id="@+id/button_comedy"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="코미디"
+                app:layout_constraintBottom_toTopOf="@id/button_adventure"
+                app:layout_constraintLeft_toRightOf="@id/button_fantasy"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_genre" />
+
+            <Button
+                android:id="@+id/button_adventure"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="모험"
+                app:layout_constraintBottom_toTopOf="@id/button_19"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_thriller"
+                app:layout_constraintTop_toBottomOf="@id/button_drama" />
+
+            <Button
+                android:id="@+id/button_thriller"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="스릴러"
+                app:layout_constraintBottom_toTopOf="@id/button_19"
+                app:layout_constraintLeft_toRightOf="@id/button_adventure"
+                app:layout_constraintRight_toLeftOf="@id/button_horror"
+                app:layout_constraintTop_toBottomOf="@id/button_drama" />
+
+            <Button
+                android:id="@+id/button_horror"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="호러"
+                app:layout_constraintBottom_toTopOf="@id/button_19"
+                app:layout_constraintLeft_toRightOf="@id/button_thriller"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_drama" />
+
+            <Button
+                android:id="@+id/button_19"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="19금"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/genre_space1"
+                app:layout_constraintTop_toBottomOf="@id/button_adventure" />
+
+            <TextView
+                android:id="@+id/textView_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="선호 장소"
+                app:layout_constraintBottom_toTopOf="@id/button_drama"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/genre_space1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_19"
+                app:layout_constraintRight_toLeftOf="@id/genre_space2"
+                app:layout_constraintTop_toBottomOf="@id/button_adventure" />
+
+            <Space
+                android:id="@+id/genre_space2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/genre_space1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_adventure" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:id="@+id/button_dif1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="1"
+                app:layout_constraintBottom_toTopOf="@id/button_dif4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_dif2"
+                app:layout_constraintTop_toBottomOf="@id/textView_difficulty" />
+
+            <Button
+                android:id="@+id/button_dif2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="2"
+                app:layout_constraintBottom_toTopOf="@id/button_dif4"
+                app:layout_constraintLeft_toRightOf="@id/button_dif1"
+                app:layout_constraintRight_toLeftOf="@id/button_dif3"
+                app:layout_constraintTop_toBottomOf="@id/textView_difficulty" />
+
+            <Button
+                android:id="@+id/button_dif3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="3"
+                app:layout_constraintBottom_toTopOf="@id/button_dif4"
+                app:layout_constraintLeft_toRightOf="@id/button_dif2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_difficulty" />
+
+            <Button
+                android:id="@+id/button_dif4"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_dif5"
+                app:layout_constraintTop_toBottomOf="@id/button_dif1" />
+
+            <Button
+                android:id="@+id/button_dif5"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_dif4"
+                app:layout_constraintRight_toLeftOf="@id/difficulty_space1"
+                app:layout_constraintTop_toBottomOf="@id/button_dif1" />
+
+            <TextView
+                android:id="@+id/textView_difficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="난이도"
+                app:layout_constraintBottom_toTopOf="@id/button_dif1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/difficulty_space1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_dif5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_dif1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_layout_time"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:id="@+id/button_time50"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="50"
+                app:layout_constraintBottom_toTopOf="@id/button_time80"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_time60"
+                app:layout_constraintTop_toBottomOf="@id/textView_time" />
+
+            <Button
+                android:id="@+id/button_time60"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="60"
+                app:layout_constraintBottom_toTopOf="@id/button_time80"
+                app:layout_constraintLeft_toRightOf="@id/button_time50"
+                app:layout_constraintRight_toLeftOf="@id/button_time70"
+                app:layout_constraintTop_toBottomOf="@id/textView_time" />
+
+            <Button
+                android:id="@+id/button_time70"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="70"
+                app:layout_constraintBottom_toTopOf="@id/button_time80"
+                app:layout_constraintLeft_toRightOf="@id/button_time60"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_time" />
+
+            <Button
+                android:id="@+id/button_time80"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="80"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_time90"
+                app:layout_constraintTop_toBottomOf="@id/button_time50" />
+
+            <Button
+                android:id="@+id/button_time90"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="90"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_time80"
+                app:layout_constraintRight_toLeftOf="@id/time_space1"
+                app:layout_constraintTop_toBottomOf="@id/button_time50" />
+
+            <TextView
+                android:id="@+id/textView_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="소요시간"
+                app:layout_constraintBottom_toTopOf="@id/button_time50"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/time_space1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_time90"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_time50" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_device"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/button_lock"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="자물쇠위주"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_device"
+                app:layout_constraintTop_toBottomOf="@id/textView_device" />
+
+            <Button
+                android:id="@+id/button_device"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="장치위주"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_lock"
+                app:layout_constraintRight_toLeftOf="@id/button_devicelock"
+                app:layout_constraintTop_toBottomOf="@id/textView_device" />
+
+            <Button
+                android:id="@+id/button_devicelock"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="비슷"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_device"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_device" />
+
+            <TextView
+                android:id="@+id/textView_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="소요시간"
+                app:layout_constraintBottom_toTopOf="@id/button_lock"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_activity"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/button_actlow"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="적음"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_actmiddle"
+                app:layout_constraintTop_toBottomOf="@id/textView_activity" />
+
+            <Button
+                android:id="@+id/button_actmiddle"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="보통"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_actlow"
+                app:layout_constraintRight_toLeftOf="@id/button_acthigh"
+                app:layout_constraintTop_toBottomOf="@id/textView_activity" />
+
+            <Button
+                android:id="@+id/button_acthigh"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="많음"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_actmiddle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_activity" />
+
+            <TextView
+                android:id="@+id/textView_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="소요시간"
+                app:layout_constraintBottom_toTopOf="@id/button_actlow"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_personal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:id="@+id/button_2people"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="2"
+                app:layout_constraintBottom_toTopOf="@id/button_5people"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_3people"
+                app:layout_constraintTop_toBottomOf="@id/textView_personal" />
+
+            <Button
+                android:id="@+id/button_3people"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="3"
+                app:layout_constraintBottom_toTopOf="@id/button_5people"
+                app:layout_constraintLeft_toRightOf="@id/button_2people"
+                app:layout_constraintRight_toLeftOf="@id/button_4people"
+                app:layout_constraintTop_toBottomOf="@id/textView_personal" />
+
+            <Button
+                android:id="@+id/button_4people"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="신림"
+                app:layout_constraintBottom_toTopOf="@id/button_5people"
+                app:layout_constraintLeft_toRightOf="@id/button_3people"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_personal" />
+
+            <Button
+                android:id="@+id/button_5people"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="기타지역"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/personal_space1"
+                app:layout_constraintTop_toBottomOf="@id/button_2people" />
+
+
+            <TextView
+                android:id="@+id/textView_personal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="추천인원"
+                app:layout_constraintBottom_toTopOf="@id/button_2people"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Space
+                android:id="@+id/personal_space1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/button_5people"
+                app:layout_constraintRight_toLeftOf="@id/personal_space2"
+                app:layout_constraintTop_toBottomOf="@id/button_2people" />
+
+            <Space
+                android:id="@+id/personal_space2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/personal_space1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_2people" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="확인" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
