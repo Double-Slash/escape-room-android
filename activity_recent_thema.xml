@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/interface2">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="15dp"
+                android:text="뒤" />
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="최근 본 테마"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="643dp">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="전체 00건"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="169dp"
+                android:layout_height="225dp"
+                android:layout_alignTop="@id/total"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:text="테마명"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/cafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:text="카페명"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafe"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:text="★ 0.0/난이도/성공"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="100dp"
+                android:text="MY PAGE"
+                android:textSize="40dp" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="93dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorAccent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@id/profile"
+                android:layout_marginLeft="150dp"
+                android:layout_toRightOf="@id/name"
+                android:text="설정" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/profile"
+                android:layout_toRightOf="@id/profile"
+                android:text="김00 님"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/cafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_alignLeft="@id/name"
+                android:layout_marginTop="5dp"
+                android:text="나의 취향 테마 찾기 >" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
