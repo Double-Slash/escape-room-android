@@ -8,17 +8,21 @@
     tools:context=".Activity.MainActivity"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/button_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.viewpager.widget.ViewPager>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
 
-    <com.google.android.material.tabs.TabLayout
+        <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         app:tabIndicatorHeight="0dp"
         android:layout_alignParentBottom="true"

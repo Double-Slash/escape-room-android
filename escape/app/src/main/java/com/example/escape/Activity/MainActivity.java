@@ -1,6 +1,7 @@
 package com.example.escape.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private ContentsPagerAdapter mContentPagerAdapter;
+    Button button_survey;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,18 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
+
+        /*20200820 설문조사 기능 추가 - start*/
+        button_survey = findViewById(R.id.button_survey);
+
+        button_survey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent surveyintent = new Intent(MainActivity.this, survey.class);
+                startActivity(surveyintent);
+            }
+        });
+        /*20200820 설문조사 기능 추가 - end*/
     }
 
     public class ContentsPagerAdapter extends FragmentStatePagerAdapter {

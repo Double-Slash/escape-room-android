@@ -15,6 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Activity.survey"/>
+
+        <activity android:name=".Activity.surveyresult"/>;
+
     </application>
 
 </manifest>
