@@ -1,4 +1,4 @@
-package com.example.cafe_detail;
+package com.example.escape.cafe_detail;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,17 +10,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.escape.R;
+import com.example.escape.cafe_detail.cafe_detail;
+
 import java.util.List;
 
 public class Adapter extends PagerAdapter {
 
-    private List<Model> models;
+    private List<com.example.cafe_detail.Model> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public Adapter(List<Model> models, Context context) {
+    public Adapter(List<com.example.cafe_detail.Model> models, Context context) {
         this.models = models;
         this.context = context;
+    }
+
+    public Adapter(List<com.example.cafe_detail.Model> models, cafe_detail context) {
     }
 
     @Override
