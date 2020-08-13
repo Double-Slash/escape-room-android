@@ -50,7 +50,7 @@ public class cafeadapter extends BaseAdapter {
         TextView textview_genre = convertView.findViewById(R.id.textView_genrelist);
         TextView textview_star = convertView.findViewById(R.id.textView_star);
 
-        imageView.setImageDrawable(listitem.getCafeimage());
+        imageView.setImageBitmap(listitem.getCafeimage());
         textview_cafe.setText(listitem.getCafename());
         textview_genre.setText(listitem.getGenrelist());
         textview_star.setText(Double.toString(listitem.getStar()));

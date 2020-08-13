@@ -1,8 +1,24 @@
 package com.example.escape.Server;
 
+import android.graphics.drawable.Drawable;
+
 public class model_cafe {
 
     String cafeId = null;
+
+    public model_cafe(String cafeId, String cafeName, String area, String address, String latitude, String longtitude, String url, String phonenum, String logo, String themes) {
+        this.cafeId = cafeId;
+        this.cafeName = cafeName;
+        this.area = area;
+        this.address = address;
+        this.latitude = latitude;
+        this.longtitude = longtitude;
+        this.url = url;
+        this.phonenum = phonenum;
+        this.logo = logo;
+        this.themes = themes;
+    }
+
     String cafeName = null;
     String area = null;
     String address = null;
