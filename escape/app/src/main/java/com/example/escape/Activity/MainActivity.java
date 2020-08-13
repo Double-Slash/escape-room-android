@@ -19,6 +19,7 @@ import com.example.escape.Fragment.SearchFragment;
 import com.example.escape.Fragment.MapFragment;
 import com.example.escape.Fragment.MypageFragment;
 import com.example.escape.R;
+import com.example.escape.Server.Task;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
