@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cafe_detail">
+    tools:context=".cafe_detail.cafe_detail">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -340,6 +340,13 @@
                     android:text="위치"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
+                <fragment
+                    android:id="@+id/googlemap"
+                    android:layout_below="@id/map"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    class="com.google.android.gms.maps.MapFragment"/>
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
