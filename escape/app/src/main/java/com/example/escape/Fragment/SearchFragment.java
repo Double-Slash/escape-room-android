@@ -15,6 +15,8 @@ import com.example.escape.Adapter.cafeitem;
 import com.example.escape.R;
 import com.example.escape.Server.Task;
 
+import java.util.concurrent.ExecutionException;
+
 public class SearchFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,12 +32,24 @@ public class SearchFragment extends Fragment {
 
         Button button_search = view.findViewById(R.id.button_search);
 
+        String cafeText = "null";
+
+
+        //api 호출해서 json->String 변환
+        Task task = new Task();
+        task.setapitype("cafe");
+        try {
+            cafeText = task.execute().get();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }catch (ExecutionException e){
+            e.printStackTrace();
+        }
+
         button_search.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Task task = new Task();
-                task.setapitype("cafe");
-                task.doInBackground();
+
             }
         });
 
