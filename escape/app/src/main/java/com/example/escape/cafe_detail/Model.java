@@ -1,4 +1,4 @@
-package com.example.cafe_detail;
+package com.example.escape.cafe_detail;
 
 public class Model {
 
