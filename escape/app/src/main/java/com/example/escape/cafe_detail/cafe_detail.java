@@ -45,10 +45,10 @@ public class cafe_detail extends AppCompatActivity implements OnMapReadyCallback
         });
 
         models = new ArrayList<>();
-        models.add(new com.example.cafe_detail.Model(R.drawable.kiki,"테마명","카페명"));
-        models.add(new com.example.cafe_detail.Model(R.drawable.kiki,"테마명1","카페명"));
-        models.add(new com.example.cafe_detail.Model(R.drawable.kiki,"테마명2","카페명"));
-        models.add(new com.example.cafe_detail.Model(R.drawable.kiki,"테마명3","카페명"));
+        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명","카페명"));
+        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명1","카페명"));
+        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명2","카페명"));
+        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명3","카페명"));
 
         adapter = new com.example.escape.cafe_detail.Adapter(models, this);
 
