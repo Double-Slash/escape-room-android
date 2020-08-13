@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:orientation="vertical"
-            android:background="@drawable/kiki">
+            android:background="@drawable/a">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -130,7 +130,7 @@
                     android:id="@+id/icon1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/kiki" />
+                    android:background="@drawable/b" />
 
                 <TextView
                     android:id="@+id/phonnumber"
@@ -155,7 +155,7 @@
                     android:id="@+id/icon2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/kiki" />
+                    android:background="@drawable/c" />
 
                 <TextView
                     android:id="@+id/address"
