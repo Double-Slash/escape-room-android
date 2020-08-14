@@ -2,17 +2,17 @@ package com.example.escape_room.Adapter;
 
 import android.graphics.Bitmap;
 
-public class Item {
+public class Item_detail {
     Bitmap themeimage;
     String themename;
-    String cafename;
-    String cafearea;
+    String themedes;
+    String themegen;
 
-    public Item(Bitmap themeimage, String themename, String cafename, String cafearea) {
+    public Item_detail(Bitmap themeimage, String themename, String themedes, String themegen) {
         this.themeimage = themeimage;
         this.themename = themename;
-        this.cafename = cafename;
-        this.cafearea = cafearea;
+        this.themedes = themedes;
+        this.themegen = themegen;
     }
 
     public Bitmap getThemeimage() {
@@ -31,20 +31,19 @@ public class Item {
         this.themename = themename;
     }
 
-    public String getCafename() {
-        return cafename;
+    public String getThemedes() {
+        return themedes;
     }
 
-    public void setCafename(String cafename) {
-        this.cafename = cafename;
+    public void setThemedes(String themedes) {
+        this.themedes = themedes;
     }
 
-    public String getCafearea() {
-        return cafearea;
+    public String getThemegen() {
+        return themegen;
     }
 
-    public void setCafearea(String cafearea) {
-        this.cafearea = cafearea;
+    public void setThemegen(String themegen) {
+        this.themegen = themegen;
     }
-
 }
