@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true"
+    tools:context=".review_detail">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/review_downstroke"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/image"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="테마명"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_toRightOf="@id/image"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cafe"
+            android:text="카페명"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/image"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:text="날짜"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/image"
+            android:layout_toEndOf="@id/image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/cafe"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/review_view"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/black_next_button"
+            android:layout_marginLeft="180dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_marginTop="15dp">
+            <RatingBar
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/score"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:max="5"
+                android:numStars="1"
+                android:rating="5"
+                android:stepSize="0.5"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:id="@+id/description"
+                android:textSize="18dp"
+                android:maxLines="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/score"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
