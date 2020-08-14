@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".SinginActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/interface1"
+        android:paddingLeft="20dp">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/black_back_button" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/back"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="SIGN UP"
+            android:textSize="40dp"/>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/interface1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Name"
+                android:id="@+id/nameText"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_layout"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="E-mail"
+                android:id="@+id/idText"
+                android:layout_below="@id/nameText"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_layout"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="Password"
+                android:id="@+id/passwordText"
+                android:layout_below="@id/idText"
+                android:layout_height="50dp"
+                android:background="@drawable/edit_layout"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password Check"
+                android:id="@+id/passwordCheckText"
+                android:layout_below="@id/passwordText"
+                android:background="@drawable/edit_layout"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button_layout"
+                android:text="SIGN UP"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:id="@+id/singupText"
+                android:layout_below="@id/passwordCheckText" />
+        </RelativeLayout>
+</RelativeLayout>
