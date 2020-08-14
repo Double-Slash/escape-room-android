@@ -5,27 +5,38 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.animation.ArgbEvaluator;
 import android.app.FragmentManager;
+import android.graphics.Bitmap;
 import android.media.Rating;
 import android.os.Bundle;
 import android.widget.RatingBar;
 
+import com.example.escape.Adapter.cafeitem;
 import com.example.escape.Fragment.MapFragment;
 import com.example.escape.R;
 
+import com.example.escape.Server.LoadImageBitmap;
+import com.example.escape.Server.model_cafe;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.escape.Server.Task;
+import com.example.escape.Server.model_cafe;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
 
 public class cafe_detail extends AppCompatActivity implements OnMapReadyCallback {
 
+    model_cafe[] modelCafes;
     ViewPager viewPager;
     com.example.escape.cafe_detail.Adapter adapter;
-    List<com.example.cafe_detail.Model> models;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
     private FragmentManager fragmentManager;
@@ -44,13 +55,7 @@ public class cafe_detail extends AppCompatActivity implements OnMapReadyCallback
             }
         });
 
-        models = new ArrayList<>();
-        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명","카페명"));
-        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명1","카페명"));
-        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명2","카페명"));
-        models.add(new com.example.cafe_detail.Model(R.drawable.c,"테마명3","카페명"));
-
-        adapter = new com.example.escape.cafe_detail.Adapter(models, this);
+        adapter = new com.example.escape.cafe_detail.Adapter(modelCafes, this);
 
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
@@ -72,6 +77,43 @@ public class cafe_detail extends AppCompatActivity implements OnMapReadyCallback
 
             }
         });
+    }
+
+    private void jsonParsing(String json)
+    {
+        try{
+
+            JSONArray cafeArray = new JSONArray(json);
+
+            for(int i=0; i<cafeArray.length(); i++)
+            {
+                JSONObject cafeObject = cafeArray.getJSONObject(i);
+
+                modelCafes[i] = new model_cafe(cafeObject.getString("cafeId")
+                        ,cafeObject.getString("cafeName")
+                        ,cafeObject.getString("area")
+                        ,cafeObject.getString("address")
+                        ,cafeObject.getString("latitude")
+                        ,cafeObject.getString("longitude")
+                        ,cafeObject.getString("url")
+                        ,cafeObject.getString("phoneNum")
+                        ,cafeObject.getString("logo")
+                        ,cafeObject.getString("themes")
+                );
+            }
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private  int jsonlength(String json){
+        try{
+            JSONArray cafeArray = new JSONArray(json);
+            return  cafeArray.length();
+        }catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override
