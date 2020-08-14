@@ -17,16 +17,16 @@ import java.util.List;
 
 public class Adapter extends PagerAdapter {
 
-    private List<com.example.cafe_detail.Model> models;
+    private List<com.example.escape.cafe_detail.Model> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public Adapter(List<com.example.cafe_detail.Model> models, Context context) {
+    public Adapter(List<com.example.escape.cafe_detail.Model> models, Context context) {
         this.models = models;
         this.context = context;
     }
 
-    public Adapter(List<com.example.cafe_detail.Model> models, cafe_detail context) {
+    public Adapter(List<com.example.escape.cafe_detail.Model> models, cafe_detail context) {
     }
 
     @Override
