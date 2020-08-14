@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/interface1"
+        android:paddingLeft="20dp">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/black_back_button" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/back"
+                android:text="LOG IN"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="40dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/interface2"
+        android:layout_below="@id/interface1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="E-mail"
+                android:id="@+id/id"
+                android:background="@drawable/edit_layout"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="20dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:id="@+id/passwordText"
+                android:layout_below="@id/id"
+                android:background="@drawable/edit_layout"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="LOG IN"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@drawable/button_layout"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/login"
+                android:layout_below="@id/passwordText"/>
+            <TextView
+                android:id="@+id/or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="180dp"
+                android:layout_below="@id/login"
+                android:text="or" />
+            <Button
+                android:id="@+id/google"
+                android:background="@drawable/google_button_layout"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:text="Log In with Google"
+                android:layout_below="@id/or"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interface2"
+        android:id="@+id/interface3"
+        android:layout_marginTop="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="#686868"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interface3"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/idsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_marginRight="15dp"
+                android:background="#FFFFFF"
+                android:text="아이디찾기" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/passsearch"
+                android:layout_toRightOf="@id/idsearch"
+                android:layout_marginRight="15dp"
+                android:background="#FFFFFF"
+                android:text="비밀번호찾기" />
+
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_toRightOf="@id/passsearch"
+                android:background="#FFFFFF"
+                android:text="회원가입" />
+    </RelativeLayout>
+
+</RelativeLayout>
