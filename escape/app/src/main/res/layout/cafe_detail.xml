@@ -29,7 +29,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
-                    android:text="뒤" />
+                    android:background="@drawable/white_back_botton"/>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -54,14 +54,23 @@
                     android:text="카페명"
                     android:textSize="20dp"/>
                 </RelativeLayout>
-                <Button
-                    android:id="@+id/homepagebutton"
+                <TextView
+                    android:id="@+id/homepage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/homepagebutton"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:text="홈페이지"
+                    android:textSize="20dp"/>
+                <Button
+                    android:id="@+id/homepagebutton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginBottom="30dp"
-                    android:text="홈페이지 >"/>
+                    android:background="@drawable/white_next_button" />
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
@@ -92,7 +101,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentRight="true"
-                    android:text="찜" />
+                    android:background="@drawable/empty_heart" />
 
                 <TextView
                     android:id="@+id/plot"
@@ -128,9 +137,9 @@
 
                 <ImageView
                     android:id="@+id/icon1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/b" />
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/phone_icon" />
 
                 <TextView
                     android:id="@+id/phonnumber"
@@ -153,9 +162,9 @@
 
                 <ImageView
                     android:id="@+id/icon2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/c" />
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/location_icon" />
 
                 <TextView
                     android:id="@+id/address"
