@@ -1,23 +1,16 @@
-package com.example.escape_room.Fragment;
+package com.example.escape_room.Activity;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.escape_room.Activity.ResultActivity;
-import com.example.escape_room.Adapter.WeekThemeAdapter;
-import com.example.escape_room.Adapter.Item;
+import com.example.escape_room.Adapter.DetailThemeAdapter;
+import com.example.escape_room.Adapter.Item_detail;
 import com.example.escape_room.R;
-import com.example.escape_room.Server.WeekImageBitmap;
+import com.example.escape_room.Server.DetailImageBitMap;
 import com.example.escape_room.Server.Task;
 import com.example.escape_room.Server.model_theme;
 
@@ -27,22 +20,17 @@ import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
 
-public class HomeFragment extends Fragment {
+public class ResultActivity extends AppCompatActivity {
+
     model_theme[] modelThemes;
     Handler handler = new Handler();
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@Nullable LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_home , container, false);
-        GridView gridView = view.findViewById(R.id.gridview_theme);
-        WeekThemeAdapter adapter = new WeekThemeAdapter();
+        setContentView(R.layout.activity_detail);
+        GridView gridView = findViewById(R.id.gridview_theme);
+        DetailThemeAdapter adapter = new DetailThemeAdapter();
 
         String themeText = "null";
 
@@ -61,32 +49,24 @@ public class HomeFragment extends Fragment {
 
         Bitmap bm;
 
+
+
         for(int i=0; i<jsonlength(themeText); i++){
-            WeekImageBitmap weekImageBitmap = new WeekImageBitmap("http://220.149.235.230/"+modelThemes[i].getImage());
+            DetailImageBitMap detailImageBitMap = new DetailImageBitMap("http://220.149.235.230/"+modelThemes[i].getImage());
             Bitmap bitmap = null;
 
             try {
-                bitmap = weekImageBitmap.execute().get();
+                bitmap = detailImageBitMap.execute().get();
             }catch (InterruptedException e){
                 e.printStackTrace();
             }catch (ExecutionException e){
                 e.printStackTrace();
             }
-            adapter.addItem(new Item(bitmap, modelThemes[i].getCafeName(), modelThemes[i].getArea(),modelThemes[i].getGenreId()));
+            adapter.addItem(new Item_detail(bitmap, modelThemes[i].getThemeName(), modelThemes[i].getDescription(),modelThemes[i].getGenreId()));
         }
 
         gridView.setAdapter(adapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(),ResultActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        return view;
     }
 
     private void jsonParsing(String json)
